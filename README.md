@@ -1,4 +1,10 @@
-# Recommendation System(RecSys) Modelling
+<h1>Recommendation System(RecSys) Modelling </h1>
+
+'''
+Chen Yan 
+'''
+
+
 ## Overview
 Given the datasets of clicks of merchants on Shopback Korea between January - March 2021, you are required to :
 1. Build a prediction model to predict what is the next merchant a user will click.
