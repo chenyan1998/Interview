@@ -8,9 +8,10 @@ Please note that all our python scripts need Python3.7+ to run.
 You can find the web frontend demo video here: [Video link](https://github.com/chenyan1998)
 
 ## Overview
-Given the datasets of clicks of merchants on Shopback Korea between January - March 2021, you are required to :
+Given the datasets of clicks of merchants on Shopback Korea between January - March 2021, here are two functions that I done:
+
 1. Build a prediction model to predict what is the next merchant a user will click.
-2. Serve the model in a web service.
+2. Serve the model in a web service use streamlit.
 
 ## UI Demo 
 
@@ -21,8 +22,10 @@ pip install streamlit
 ```
 streamlit run web.py
 ```
+## The steps to run the web service locally
 
-## How to run the code
+
+## Notebook Architecture 
 
 
 
