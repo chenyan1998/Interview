@@ -49,7 +49,7 @@ streamlit run web.py
 1. Perform Train-Test split for the datasets
 2. Measure the performance of the Test Dataset using any RecSys metrics.
 
-> Model Serving on Streamlit web service
+> Model Serving on Streamlit web service (web.py)
 1. The web service should have an endpoint called `/predict`, that takes in user-defined input as return a `merchant_id` as its prediction output. 
 2. Document clearly the steps to run the web service locally.
 
