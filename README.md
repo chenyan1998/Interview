@@ -1,16 +1,34 @@
 <h1>Recommendation System(RecSys) Modelling </h1>
 
-'''
+```
 Chen Yan 
-'''
+```
 
+Please note that all our python scripts need Python3.7+ to run.
+You can find the web frontend demo video here: [Video link](https://github.com/chenyan1998)
 
 ## Overview
 Given the datasets of clicks of merchants on Shopback Korea between January - March 2021, you are required to :
 1. Build a prediction model to predict what is the next merchant a user will click.
 2. Serve the model in a web service.
 
-PS: you will not be assessed for the accuracy of the model, instead for the thoughts and engineering process while performing this exercise.
+## UI Demo 
+
+```
+pip install streamlit
+```
+
+```
+streamlit run web.py
+```
+
+## How to run the code
+
+
+
+
+
+
 
 ## Schema
 ### Clicks
