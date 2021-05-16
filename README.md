@@ -38,41 +38,41 @@ streamlit run web2.py
 7. model_building.ipynb (This is the main code for model building)
 8. web.py (This is the main code for model serving on stremlit web service)
 
-##Outline of this notebook : EDA_ExploreDataset.ipynb
+## Outline of this notebook : EDA_ExploreDataset.ipynb
 
-Part1 : Visualize Parquet Data in Python
-Part2 : Data clean
-        1. Rename cols of dataframe
-        2. Merge three dataframe
-        3. Calculate click number of stores and add to dataset
-Part3 : EDA Task
-        1. Task1 : The most clicked merchant for month January 2021
-        2. Task2 : The distribution of clicks of merchant for month March 2021
-        3. Task3 : On average, what are the number of clicks user make in 1 month?
-Part4 : Dataset preparation
-        1.List all classes of each features
-        2.Label selected features with numeric format for fit in model
-        3.Create a new dataset for training and testing with numeric label and selected features
-        4.Create a list of labels for prediction
-        5.Store final dataset for training model new_dataset_features2
+        Part1 : Visualize Parquet Data in Python
+        Part2 : Data clean
+                1. Rename cols of dataframe
+                2. Merge three dataframe
+                3. Calculate click number of stores and add to dataset
+        Part3 : EDA Task
+                1. Task1 : The most clicked merchant for month January 2021
+                2. Task2 : The distribution of clicks of merchant for month March 2021
+                3. Task3 : On average, what are the number of clicks user make in 1 month?
+        Part4 : Dataset preparation
+                1.List all classes of each features
+                2.Label selected features with numeric format for fit in model
+                3.Create a new dataset for training and testing with numeric label and selected features
+                4.Create a list of labels for prediction
+                5.Store final dataset for training model new_dataset_features2
 
-##Outline of this notebook : model_building.ipynb
+## Outline of this notebook : model_building.ipynb
 
-Part1 : EDA : Visualise how balance our new_dataset is
-Part2 : Training and Test dataset Split
-Part3 : Define and train the model (Machine Learning)
-        1. GNB model
-        2. Decision three model
-        3. K near neighbor model
-        4. Random Forest model
-Part4 : Set evaluate metrix function
-        1.AUC
-        2.Report
-        3.Confusion
-        4.Rocfig
-Part5 : Predict and evaluate metric
-Part6 : Save Predict Result
-Part7 : Save models
+        Part1 : EDA : Visualise how balance our new_dataset is
+        Part2 : Training and Test dataset Split
+        Part3 : Define and train the model (Machine Learning)
+                1. GNB model
+                2. Decision three model
+                3. K near neighbor model
+                4. Random Forest model
+        Part4 : Set evaluate metrix function
+                1.AUC
+                2.Report
+                3.Confusion
+                4.Rocfig
+        Part5 : Predict and evaluate metric
+        Part6 : Save Predict Result
+        Part7 : Save models
 
 ## Task and function implemented 
 
