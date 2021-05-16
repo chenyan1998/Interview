@@ -1,69 +1,55 @@
-# Recommendation System(RecSys) Modelling
+<h1>Recommendation System(RecSys) Modelling </h1>
+
+```
+Chen Yan 
+```
+
+Please note that all our python scripts need Python3.7+ to run.
+You can find the web frontend demo video here: [Video link](https://github.com/chenyan1998)
+
 ## Overview
-Given the datasets of clicks of merchants on Shopback Korea between January - March 2021, you are required to :
+Given the datasets of clicks of merchants on Shopback Korea between January - March 2021, here are two functions that I done:
+
 1. Build a prediction model to predict what is the next merchant a user will click.
-2. Serve the model in a web service.
+2. Serve the model in a web service use streamlit.
 
-PS: you will not be assessed for the accuracy of the model, instead for the thoughts and engineering process while performing this exercise.
+## UI Demo 
 
-## Schema
-### Clicks
-`data/clicks.parquet`
+```
+pip install streamlit
+```
 
-| Column Name  | Description |
-| ------------- | ------------- |
-| id | Click Identifier |
-| user_id  | User Identifier  |
-| store_id  | Store Identifier  |
-| device  | User Device |
-| platform | Platform that user makes the click from |
-| channel | Channel that contributes the click |
-| created_at | Timestamp of the click is made |
+```
+streamlit run web.py
+```
+## The steps to predit the next merchant with the web service
 
-### Stores
-`data/stores.parquet`
-| Column Name  | Description |
-| ------------- | ------------- |
-| id  | Store Identifier  |
-| merchant_id | Corresponding merchant identifier for the store |
-| start_at | Store Start Date |
-| end_at | Store End Date |
-| display_text | Text Displayed for the Store |
-| is_searchable | Where Store is Searchable from App |
+1. The web service have an endpoint called `/predict`, that takes in user-defined input as return a `merchant_id` as its prediction output. 
 
-*  Multiple stores might map to the same merchant
+## Notebook file directories
 
-### Users
-`data/users.parquet`
-| Column Name  | Description |
-| ------------- | ------------- |
-| id  | User Identifier  |
-| signup_datetime | Timestamp of User Sign Up |
-| lifetime_first_merchant | The first merchant that user purchase with Shopback |
-| lifetime_first_purchase_datetime | Datetime of first purchase |
-| account_referral | Referral of the account, usually refers to campaigns |
+1. data (It includes original data)
+2. data_csv (It transfers original data to csv format and store it in this file)
+3. data_select_features (It includes a dataset that after data cleaning and features selection)
+4. train_models (This file include different trained models)
+5. web_framework (This file include streamlit web service code)
+6. EDA_ExploreDataset.ipynb (This is the main code for exploring the given datasets)
+7. model_building.ipynb (This is the main code for model building)
+8. web.py (This is the main code for model serving on stremlit web service)
 
-## EDA 
-> Estimate time to spend : 1-3 Hours
+## Task and function implemented 
 
-Explore the given datasets, derive any interesting findings and visualize it using any tool of your choice. Example questions to answer are :
-* What are the most clicked merchant for month January 2021?
-* What are the distribution of clicks of merchant for month March 2021?
-* On average, what are the number of clicks user make in 1 month?
+> Explore the Given datasets (EDA_ExploreDataset.ipynb)
+1. The most clicked merchant for month January 2021
+2. The distribution of clicks of merchant for month March 2021
+3. On average, The number of clicks user make in 1 month
 
-## Model Building
-> Estimate time to spend : 2-5 Hours
 
-Construct the prediction model using any algorithm(s) of your choice. You are required to:
+> Model Building (model_building.ipynb)
 1. Perform Train-Test split for the datasets
 2. Measure the performance of the Test Dataset using any RecSys metrics.
 
-## Model Serving
-> Estimate time to spend : 2-3 Hours
-
-Encapsulate the final model in form of a web service. The web framework can be written only in Python (most preferred) or Golang (2nd most preferred). 
-
-### Must have:
+> Model Serving on Streamlit web service (web.py)
 1. The web service should have an endpoint called `/predict`, that takes in user-defined input as return a `merchant_id` as its prediction output. 
 2. Document clearly the steps to run the web service locally.
 
